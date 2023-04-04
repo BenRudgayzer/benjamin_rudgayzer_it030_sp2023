@@ -13,14 +13,22 @@ if (hour < 12) {
 }
 document.getElementById('greeting').textContent = greeting;
 
-
-let breakpoint;
+function getCurrentBreakpoint() {
 const width = window.innerWidth;
-if (width < 567) {
-  breakpoint = 'You are currently on a mobile device';
-} else if (width < 768) {
-  breakpoint = 'You are on a tablet device';
-} else if (width > 768) {
-  breakpoint = 'Desktop devices are the best to view my website';
+
+if (width >= 567 && width < 768) {
+return "You are currently on a mobile device.";
+} else if (width >= 768 && width < 1024) {
+return "You are on a tablet device.";
+} else if (width >= 1024) {
+return "Desktop devices are the best to view my website.";
 }
-document.getElementById('breakpoint').textContent = breakpoint;
+}
+const breakpointMessage = document.getElementById("breakpoint-message");
+breakpointMessage.textContent = getCurrentBreakpoint();
+
+function updatebreakpointMessage() {
+breakpointMessage.textContent = getCurrentBreakpoint();
+}
+
+window.addEventListener("resize", updatebreakpointMessage);
