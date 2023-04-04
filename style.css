@@ -9,6 +9,7 @@ header{
   margin: 15px;
   align-content: Center ;
   background-color: #eee;
+  text-align: center;
 }
 h1 {
   color: black;
@@ -95,7 +96,7 @@ nav ul {
   .grid {
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
-      "nav nav nav nav"
+      "nav nav nav"
       "aside  article article"
       "aside  article acritcle"
       "aside  section section"
