@@ -1,0 +1,136 @@
+body { 
+  font-family: arial, Verdana, sans-serif;
+  font-size: 12px;
+  color: black;
+}
+header{
+  border: 1px solid black;
+  padding: 20px;
+  margin: 15px;
+  align-content: Center ;
+  background-color: #eee;
+}
+h1 {
+  color: black;
+}
+
+nav, article, footer, #section {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+nav, article, footer, #section {
+  background: #eee;
+}
+article {
+  grid-area: article;
+  border: 1px solid black;
+  padding: 10px;
+  overflow: auto;
+}
+
+
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  display: block;
+  padding: 10px;
+  color: #eee;
+  color: black;
+}
+
+nav li a:hover {
+  color: blue;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+}
+
+.picture {
+  display: flex;
+  border: 1px solid black;
+}
+.picture > figure {
+  width: 200px;
+}
+.picture > div {
+  margin: 1px;
+}
+
+/* grid system */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "nav"
+    "aside"
+    "section"
+    "article"
+    "footer";
+}
+
+/* when over 576 px */
+@media screen and (min-width: 576px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "nav nav"
+      "article section"
+      "aside aside"
+      "footer footer";
+  }
+}
+
+/* when over 768 px*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .grid {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      "aside  article article"
+      "aside  article acritcle"
+      "aside  section section"
+      "footer footer footer ";
+  }
+}
+/* when over 1024 px */
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 5fr 1fr 1fr;
+    grid-template-areas:
+      "nav nav nav"
+      "section section aside"
+      "article article aside"
+      "footer footer footer";
+  }
+}
+
+#nav {
+  grid-area: nav;
+  border: 1px solid black;
+  padding: 5px;
+}
+#section {
+  display: flex;
+  flex-wrap: wrap;
+}
+#aside {
+  grid-area: aside;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+
+
+
+
+
