@@ -13,6 +13,7 @@ if (hour < 12) {
 }
 document.getElementById('greeting').textContent = greeting;
 
+
 let breakpoint;
 const width = window.innerWidth;
 if (width < 567) {
